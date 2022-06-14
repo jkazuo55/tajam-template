@@ -1,0 +1,41 @@
+/* import google fonts  */
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@900&family=Roboto:wght@100;300;900&display=swap');
+
+/* font-family: 'Hammersmith One', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Roboto', sans-serif; */
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 500px;
+    background: red;
+}
+
+.carousel .container {
+    max-width: 770px;
+    position: relative;
+    background-color: green;
+    text-align: center;
+}
+
+.carousel .carousel__slides {
+    position: absolute;
+}
+
+.carousel .carousel__pagination {
+    position: absolute;
+    display: flex;
+    top: 102%;
+    width: 100%;
+    justify-content: center;
+}
+
+.carousel .carousel__pagination li a span {
+    width: 15px;
+    height: 15px;
+    background-color: #000000;
+    display: block;
+    border-radius: 50%;
+}
