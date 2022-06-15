@@ -1,41 +1,284 @@
-/* import google fonts  */
+/* =========== GOOGLE FONTS Hammersmith One,Playfair Display and  Roboto*/
 
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Playfair+Display:wght@900&family=Roboto:wght@100;300;900&display=swap');
 
-/* font-family: 'Hammersmith One', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Roboto', sans-serif; */
+/*===== VARIABLES CSS =====*/
+
+:root {
+    /* colors */
+    --color1: rgba(255, 255, 255);
+    --color2: rgba(0, 224, 208);
+    /* font and typography */
+    --font-hammersmith: 'Hammersmith One', sans-serif;
+    --font-playfair-display: 'Playfair Display', serif;
+    --font-Roboto: 'Roboto', sans-serif;
+    /* z index */
+    --global-z-fixed: 99;
+    /* paddings */
+    --padding-container: 15px
+}
+
+
+/*========== BASE ==========*/
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin: 0;
+}
+
+ul,
+ol {
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* ============ CLASSES ============= */
 
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 500px;
-    background: red;
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container);
+    margin: 0 auto;
+}
+
+
+/* heading */
+
+.heading {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+.heading .container {
+    max-width: 970px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: var(--padding-container);
+    padding-bottom: var(--padding-container);
+}
+
+.heading .heading__logo {
+    display: flex;
+    align-items: center;
+}
+
+.heading .heading__logo div:nth-child(1) {
+    margin-right: 11px;
+}
+
+.navbar {
+    min-width: 541px;
+    padding-left: 5px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li a:after,
+.navbar ul li a:before {
+    transition: all .5s;
+}
+
+.navbar ul li a {
+    padding: 10px;
+    font-size: 13px;
+    letter-spacing: 0px;
+    color: var(--color1);
+    font-weight: 900;
+    font-family: var(--font-Roboto);
+    text-transform: uppercase;
+    position: relative;
+}
+
+.navbar ul li:last-child a {
+    padding-right: 0;
+}
+
+.navbar ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: var(--color1);
+    height: 1px;
+}
+
+.navbar ul li a:hover:after {
+    width: 100%;
+}
+
+.navbar ul li .active {
+    color: var(--color2);
+}
+
+
+/* carousel */
+
+.carousel {
+    position: relative;
+    background-image: url("../img/forest-background.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 670px;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
 }
 
 .carousel .container {
     max-width: 770px;
-    position: relative;
-    background-color: green;
+    position: absolute;
+    top: 32.5%;
+}
+
+.carousel .carousel__slider li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel .carousel__slider li div h1 {
+    font-size: 32px;
+    letter-spacing: 0px;
+    color: #ffffff;
+    font-weight: 900;
+    font-family: "Playfair Display";
     text-align: center;
 }
 
-.carousel .carousel__slides {
-    position: absolute;
+.carousel .carousel__slider li div p {
+    margin-top: 52px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 24px;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: "Roboto";
+    text-align: center;
 }
 
-.carousel .carousel__pagination {
-    position: absolute;
+.carousel .carousel__slider li a {
+    margin-top: 49px;
+    margin-bottom: 126px;
+    /* min-width: 121px; */
+    /* min-height: 41px; */
+    padding: 10px 17px;
+    display: inline-flex;
+    font-size: 16px;
+    color: #00e0d0;
+    font-weight: 400;
+    font-family: "Hammersmith One";
+    border-radius: 3px;
+    border: 1px solid var(--color2);
+}
+
+.slick-dots {
     display: flex;
-    top: 102%;
-    width: 100%;
     justify-content: center;
+    margin: 0;
+    /* padding: 16px 0; */
+    list-style-type: none;
 }
 
-.carousel .carousel__pagination li a span {
-    width: 15px;
-    height: 15px;
-    background-color: #000000;
-    display: block;
-    border-radius: 50%;
+.slick-dots li {
+    margin: 0 4px;
+    width: auto;
 }
+
+.slick-dots li button {
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: 1px solid var(--color1);
+    border-radius: 50%;
+    text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: var(--color2);
+    border: none;
+}
+
+
+/* body {
+    padding: 5rem;
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: 1.2rem;
+}
+
+p {
+    margin: 0 0 2rem;
+}
+
+.slider {
+    width: 40rem;
+}
+
+.slide img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 1rem 0;
+    list-style-type: none;
+    background-color: green;
+}
+
+.slick-dots li {
+    margin: 0 0.25rem;
+}
+
+.slick-dots li button {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: orange;
+    text-indent: -9999px;
+}
+
+.slick-dots li.slick-active button {
+    background-color: black;
+} */
