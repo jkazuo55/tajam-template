@@ -8,6 +8,7 @@
     /* colors */
     --color1: rgba(255, 255, 255);
     --color2: rgba(0, 224, 208);
+    --color3: #413d4b;
     /* font and typography */
     --font-hammersmith: 'Hammersmith One', sans-serif;
     --font-playfair-display: 'Playfair Display', serif;
@@ -241,7 +242,7 @@ img {
 }
 
 
-/* ============ start story section */
+/* ================= start story section ==================*/
 
 .story .container {
     max-width: 873px;
@@ -262,29 +263,30 @@ img {
 .story .story__info h3 {
     font-size: 22px;
     letter-spacing: 1px;
-    color: #413d4b;
+    color: var(--color3);
     font-weight: 700;
-    font-family: "Playfair Display";
+    font-family: var(--font-playfair-display);
     text-transform: uppercase;
 }
 
 .story .story__info p {
+    padding: 10px 0;
+    width: 100%;
     max-width: 540px;
     font-size: 14px;
     letter-spacing: 0px;
     line-height: 22px;
-    color: #413d4b;
+    color: var(--color3);
     font-weight: 300;
-    font-family: "Roboto";
+    font-family: var(--font-Roboto);
+}
+
+.story .story__info .cyan-btn {
+    width: max-content;
 }
 
 
-/* .story .story__info .cyan-btn {
-    width: max-content;
-} */
-
-
-/* ============ end story section */
+/* ================= end story section ==================*/
 
 
 /* ============ start video section */
