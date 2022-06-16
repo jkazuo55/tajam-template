@@ -9,6 +9,8 @@
     --color1: rgba(255, 255, 255);
     --color2: rgba(0, 224, 208);
     --color3: #413d4b;
+    --color4: #333333;
+    --color5: #f9f9f9;
     /* font and typography */
     --font-hammersmith: 'Hammersmith One', sans-serif;
     --font-playfair-display: 'Playfair Display', serif;
@@ -64,7 +66,7 @@ img {
 }
 
 
-/* start heading section */
+/* ============ start heading section ============*/
 
 .heading {
     position: fixed;
@@ -152,10 +154,10 @@ img {
 }
 
 
-/* end header section */
+/* ============ end heading section ============*/
 
 
-/* start hero section */
+/* ============ start hero section ============*/
 
 .hero {
     position: relative;
@@ -212,6 +214,7 @@ img {
     font-family: "Hammersmith One";
     border-radius: 3px;
     border: 1px solid var(--color2);
+    text-transform: uppercase;
 }
 
 .slick-dots {
@@ -242,7 +245,10 @@ img {
 }
 
 
-/* ================= start story section ==================*/
+/* ============ end hero section ============*/
+
+
+/* ============ start story section ==================*/
 
 .story .container {
     max-width: 873px;
@@ -286,10 +292,10 @@ img {
 }
 
 
-/* ================= end story section ==================*/
+/* ============ end story section ==================*/
 
 
-/* ============ start video section */
+/* ============ start video section =================*/
 
 .movie .container {
     max-width: 100%;
@@ -325,7 +331,7 @@ img {
 }
 
 
-/* ============ end video section =============*/
+/* ============ start video section =================*/
 
 
 /* ============ start expertise section =============*/
@@ -343,9 +349,9 @@ img {
     padding: 8px;
     font-size: 22px;
     letter-spacing: 1px;
-    color: #413d4b;
+    color: var(--color3);
     font-weight: 700;
-    font-family: "Playfair Display";
+    font-family: var(--font-playfair-display);
     text-align: center;
     text-transform: uppercase;
 }
@@ -354,9 +360,9 @@ img {
     padding: 8px;
     font-size: 14px;
     letter-spacing: 1px;
-    color: #2f2d35;
+    color: var(--color3);
     font-weight: 400;
-    font-family: "Playfair Display";
+    font-family: var(--font-playfair-display);
     text-align: center;
 }
 
@@ -366,9 +372,6 @@ img {
     justify-content: space-between;
     padding-bottom: 76px;
     padding-top: 57px;
-    /* gap: 66px; */
-    /* grid-template-rows: auto; */
-    /* grid-template-columns: repeat(auto-fill, minmax(254px, 1fr)); */
 }
 
 .grid .grid__item {
@@ -386,7 +389,7 @@ img {
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    color: #413d4b;
+    color: var(--color3);
     font-weight: 900;
     font-family: "Roboto";
     text-align: center;
@@ -398,9 +401,9 @@ img {
     font-size: 14px;
     letter-spacing: 1px;
     line-height: 22px;
-    color: #333333;
+    color: var(--color4);
     font-weight: 300;
-    font-family: "Roboto";
+    font-family: var(--font-Roboto);
     text-align: center;
 }
 
@@ -412,6 +415,9 @@ img {
 
 .team {
     background-image: url("../img/Team.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .team .container {
@@ -422,38 +428,49 @@ img {
 .team .team__header h3 {
     font-size: 22px;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: var(--color1);
     font-weight: 700;
-    font-family: "Playfair Display";
+    font-family: var(--font-playfair-display);
     text-align: center;
     text-transform: uppercase;
 }
 
 .team .team__header p {
+    padding: 16px 0;
     font-size: 14px;
     letter-spacing: 1px;
-    color: #f9f9f9;
+    color: var(--color5);
     font-weight: 400;
-    font-family: "Playfair Display";
+    font-family: var(--font-playfair-display);
     text-align: center;
 }
 
 .team .team__cards {
+    margin: 50px 0;
     display: flex;
     justify-content: space-between;
 }
 
+.team .team__card {
+    margin: 0 auto;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, .5);
+}
+
 .team .team__card p {
+    padding-top: 20px;
+    padding-bottom: 20px;
     text-transform: uppercase;
     font-size: 14px;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: var(--color1);
     font-weight: 900;
-    font-family: "Roboto";
+    font-family: var(--font-Roboto);
     text-align: center;
 }
 
 .team .team__card p span {
+    padding-top: 12px;
     display: block;
     font-size: 13px;
     color: #fafafa;
@@ -462,20 +479,28 @@ img {
     text-align: center;
 }
 
+.team .team__footer {
+    text-align: center;
+}
+
 .team .team__footer p {
     font-size: 14px;
     letter-spacing: 1px;
-    color: #f3f3f3;
+    color: var(--color1);
     font-weight: 300;
-    font-family: "Roboto";
+    font-family: var(--font-Roboto);
     text-align: center;
+}
+
+.team .team__footer .cyan-btn {
+    margin-top: 25px;
 }
 
 
 /* ============ end team section =============*/
 
 
-/* ============ start footer section */
+/* ============ start footer section ==============*/
 
 .footering {
     background-image: url('../img/footer-background.png');
@@ -605,7 +630,7 @@ img {
 }
 
 
-/* ============ end footer section */
+/* ============ end footer section ====================*/
 
 @media (max-width:768px) {
     /* start header section */
@@ -656,6 +681,14 @@ img {
         margin: 0 auto;
     }
     /* end story section */
+    /* start meet section */
+    .team .team__cards {
+        flex-wrap: wrap;
+    }
+    .team .team__card {
+        margin-top: 20px;
+    }
+    /* end meet section */
     /* start footer section */
     .footering .footering__info {
         flex-wrap: wrap;
