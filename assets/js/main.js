@@ -1,12 +1,15 @@
-$(document).ready(function() {
-    // $('.single-item').slick({
-    //     dots: true,
-    //     customPaging: function(slider, i) {
-    //         return '<a href="#">hola</a>';
-    //     },
-    // });
+// start change background header when there is scroll
+window.onscroll = function() {
+        const header = document.getElementsByClassName('heading')[0];
+        const headerContainer = header.children[0];
+        header.classList.toggle("heading--background", window.pageYOffset > 0)
+    }
+    // end change background header when there is scroll
 
-    $('.carousel__slider').slick({
+
+$(document).ready(function() {
+    // start slider for hero section
+    $('.slider').slick({
         infinite: true,
         dots: true,
         arrows: false,
@@ -15,4 +18,5 @@ $(document).ready(function() {
         fade: true,
         fadeSpeed: 1000
     });
+    // end slider for hero section
 });
