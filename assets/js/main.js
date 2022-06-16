@@ -7,6 +7,18 @@ window.onscroll = function() {
     // end change background header when there is scroll
 
 
+
+let videoStory = document.querySelector('.movie__story');
+
+function playPauseVideo() {
+    if (videoStory.paused) {
+        videoStory.play();
+    } else {
+        videoStory.pause();
+    }
+}
+
+
 $(document).ready(function() {
     // start slider for hero section
     $('.slider').slick({

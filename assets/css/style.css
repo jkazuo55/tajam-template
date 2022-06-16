@@ -291,30 +291,37 @@ img {
 
 /* ============ start video section */
 
-.movie {
-    background-image: url('../img/vidio\ baackground.png');
-    height: 100%;
-}
-
 .movie .container {
-    padding-top: 202px;
-    padding-bottom: 202px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    max-width: 100%;
+    position: relative;
 }
 
-.movie p {
+.movie video {
+    width: 100%;
+    max-height: 550px;
+    object-fit: cover;
+}
+
+.movie .movie__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.movie .movie__play img {
+    cursor: pointer;
+}
+
+.movie .movie__play p {
     text-transform: uppercase;
     margin-top: 34px;
     font-size: 16px;
     letter-spacing: 1px;
-    color: #ffffff;
+    color: var(--color1);
     font-weight: 900;
-    font-family: "Roboto";
-    text-align: center;
+    font-family: var(--font-Roboto);
 }
 
 
@@ -677,4 +684,9 @@ img {
         margin-top: 50px;
     }
     /* end footer section */
+    /* start story section */
+    .movie .movie__play img {
+        width: clamp(50px, 2.5vw, 100%);
+    }
+    /* end story section */
 }
