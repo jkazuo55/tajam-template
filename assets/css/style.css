@@ -560,6 +560,99 @@ img {
 /* ============ end projects section =============*/
 
 
+/* ============ start subscribe section =============*/
+
+.subscribe .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 0;
+    padding-left: var(--padding-container);
+    padding-right: var(--padding-container);
+}
+
+.subscribe .subscribe__submit {
+    max-width: 460px;
+    width: 100%;
+}
+
+.subscribe .subscribe__clients {
+    max-width: 380px;
+    height: 100%;
+}
+
+.subscribe .subscribe__submit h3,
+.subscribe .subscribe__clients h3 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: var(--color3);
+    font-weight: 700;
+    font-family: var(--font-playfair-display);
+    text-transform: uppercase;
+    padding-top: 71;
+    padding-bottom: 34px;
+}
+
+.form .form__item {
+    max-width: 460px;
+    /* margin-bottom: 15px; */
+}
+
+.form .form__item input {
+    height: 46px;
+    width: 100%;
+    display: block;
+    transition: all 0.3s;
+    padding-left: 22px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.form .form__item textarea {
+    padding-left: 22px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    height: 200px;
+    width: 100%;
+}
+
+.form .form__item label {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 30px;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+}
+
+.form .form__item input:placeholder-shown+label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+}
+
+.subscribe .subscribe__submit a {
+    margin-top: 20px;
+}
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.brands .brands__item {
+    flex-basis: 50%;
+    width: 155px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+/* ============ end subscribe section =============*/
+
+
 /* ============ start footer section ==============*/
 
 .footering {
@@ -759,6 +852,16 @@ img {
         margin: 15px auto;
     }
     /* end project section */
+    /* start subscribe section */
+    .subscribe .container {
+        flex-wrap: wrap;
+    }
+    .subscribe .subscribe__submit,
+    .subscribe .subscribe__clients {
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+    /* end subscribe section */
     /* start footer section */
     .footering .footering__info {
         flex-wrap: wrap;
