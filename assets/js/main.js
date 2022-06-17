@@ -31,4 +31,21 @@ $(document).ready(function() {
         fadeSpeed: 1000
     });
     // end slider for hero section
+
+    $('.testimonials__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.testimonials__graphic'
+    });
+    $('.testimonials__graphic').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        asNavFor: '.testimonials__slider',
+        centerMode: true,
+        focusOnSelect: true,
+        centerPadding: '0px',
+    });
+
 });
